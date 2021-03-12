@@ -12,12 +12,15 @@
 #Informe nota do 5º participante: 9.4
 #O(a) vencedor(a) foi Zeugma com nota 9.4!
 
-for i in range(5):
-  nome = input(f"Informe o nome do {i+1}º participante: ")
-  nota = float(input(f"Informe a nota do {i+1}º participante: "))
-  
-  if i == 0 or nota > nota_vencedor:
-    nome_vencedor = nome
-    nota_vencedor = nota
-  
-  print(f"Vencedor {nome_vencedor} : nota {nota_vencedor}")
+def escolhe_vencedor():
+  for i in range(5):
+    nome = input(f"Informe o nome do {i+1}º participante: ")
+    nota = float(input(f"Informe a nota do {i+1}º participante: "))
+    
+    if i == 0 or nota > nota_vencedor:
+      nome_vencedor = nome
+      nota_vencedor = nota
+    
+  print(f"O vencedor foi {nome_vencedor} e com nota {nota_vencedor}")
+
+escolhe_vencedor()
